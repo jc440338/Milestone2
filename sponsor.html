@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+
+<center><script language="JavaScript" type="text/javascript">
+<!--
+
+var mess=["Welcome","To","Townville Community","Music Centre","Townville Music Centre"]; 
+
+var StartColor="Grey";
+var EndColor="Black";
+
+
+
+var gcount=0 
+var T; 
+var Count=3;
+var typeCount=10
+
+var lineOne=new Array();
+var lineTwo=new Array();
+
+lineOne=["|","/","--","\\"];lineTwo=["|","\\","--","/"];
+
+var ArrayOfArrays=[lineOne,lineTwo,lineOne,lineTwo];
+
+var lines=new Array("one","two","three","four"); 
+var writing="";
+
+var RHUCKO1=0; 
+window.onload=loadVars;
+function loadVars()
+{
+ for(var x=0;x<lines.length;x++)
+  lines[x]=document.getElementById(lines[x]);
+	
+  writing=document.getElementById('typing');
+  writing.style.color=StartColor;
+	
+	setVals();
+}
+function setVals()
+{
+ if(Count<lineOne.length&&typeCount<mess[gcount].length)
+ {
+  T=15;
+  lines[0].innerHTML=ArrayOfArrays[0][Count];
+	lines[1].innerHTML=ArrayOfArrays[1][Count];
+	lines[2].innerHTML=ArrayOfArrays[2][Count];
+	lines[3].innerHTML=ArrayOfArrays[3][Count];
+	
+	Count+=1;
+ }
+ else
+ {
+   Count=0;
+ }
+ if(typeCount<=mess[gcount].length)
+ {
+   writing.style.position="relative";
+	 writing.innerHTML=mess[gcount].substring(typeCount-1,typeCount);
+	 
+	 typeCount++;
+ }
+ else if(RHUCKO1<=mess[gcount].length)
+ {
+   T=100;
+   writing.innerHTML=mess[gcount].substring(0,RHUCKO1);
+	 RHUCKO1++;
+ }
+ else if(gcount<mess.length-1)
+ {
+    if(gcount==mess.length-2)
+		{
+		 for(var x=0;x<lines.length;x++)
+		  lines[x].style.visibility="hidden";
+			
+		    writing.style.color=EndColor;	 
+		}
+		  
+   Count=0;typeCount=0;RHUCKO1=0;
+   gcount++;
+ }
+ setTimeout("setVals();",T);
+}
+
+function DynamicMove()
+{
+  location.href=HREF;
+}
+
+</script>
+<style type="text/css">
+<!--
+body span.line {
+		 					 	 position:relative;
+								 font-weight:900;
+								 font-size:80;
+								 color:gray;
+								 visibility:visible;
+		 					 }
+body tt#typing {
+		 					   font-weight:900;
+								 font-size:80px;
+								 cursor:hand;
+		 					 }
+-->
+</style>
+
+<meta charset="utf-8">
+<title>about.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<script type="text/javascript" src="java.js"></script>
+<body class="logo">
+<span class="line" id="one"></span><br />
+<span class="line" id="two"></span>
+<tt id="typing" onclick="DynamicMove();"></tt>
+<span class="line" id="three"></span><br />
+<span class="line" id="four"></span>
+
+<div>
+<p class="menu"><a href="homepage.html">Home</a></p>
+<p class="menu"><a href="about.html">About Us</a></p>
+<p class="menu"><a href="member.html">Members</a></p>
+<p class="menu"><a href="sponsor.html">Sponsor</a></p>
+<p class="menu"><a href="bulletins.html">Bulletins</a></p>
+<p class="menu"><a href="musos.html">Musos</a></p>
+<p class="menu"><a href="feedback.html">Feedback Form</a></p>
+<p>__________________________________ </p>
+<p>&nbsp;</p>
+<center><h3>The Music Centre receives vital support from the sponsors featured on this page<BR></h3>
+<p>Our music concerts are well-publicised and well-attended and sponsors enjoy brand exposure throughout the Arts community.       We welcome sponsorship or assistance in any form.</p>
+<p>&nbsp;</p>
+<HR>
+<p><span style="text-align:left; font-weight:bold; font-size:20pt; color:black;">
+<marquee scrolldelay='10' width='200' bgColor='white' behavior='scoll' direction='left' style='color:black;' height='30'>Townville City Concil</marquee>
+             <br /></span><br> <BR>
+  The Council's Partnerships and Sponsorships scheme provides vital core funding which enables us to maintain the administrative base for all our other activities, and also provides the premises which house our office space. <BR>
+  The Council also assists with the performance venues for our concerts and workshops. </p>
+<p><center><img height="120" align="center" alt="TCC logo" src="http://townsvillemusic.org.au/SiteImages/TCCcolour150193.gif"></center><BR clear="all">
+</p>
+<span style="text-align:left; font-weight:bold; font-size:20pt; color:black;">
+<marquee scrolldelay='10' width='200' bgColor='white' behavior='scoll' direction='left' style='color:black;' height='30'>Queenland Government</marquee>
+             <br /></span><br>
+<p>The Gambling Community Benefit Fund has assisted us to obtain office equipment and sound and lighting equipment for our production</p></center>
+<p><center>
+  <p><img src="TCMC Images Docs/SiteImages/GCBF15091.png" width="150" height="92" alt=""/></p>
+  <p>&nbsp;</p>
+  <p><img src="TCMC Images Docs/events/vegas 1.jpg" width="642" height="331" alt=""/><img src="TCMC Images Docs/events/Stokes.jpg" width="639" height="253" alt=""/></p>
+  <p>&nbsp;</p>
+   <center><p>&copy; 2016-2017 Australia, <a href="http://www.jcu.edu.au/" target="_self">Townville Music Centre</a> | <a
+            href="#header" target="_self">To Top</a></p><br></center>
+  <p><img src="TCMC Images Docs/SiteImages/TCCgcbfQN100px.png" width="500" height="100" alt=""/></p>
+</center></p>
+</body>
+</html>

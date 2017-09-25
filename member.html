@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+
+<center><script language="JavaScript" type="text/javascript">
+<!--
+
+var mess=["Welcome","To","Townville Community","Music Centre","Townville Music Centre"]; 
+
+var StartColor="Grey";
+var EndColor="Black";
+
+
+
+var gcount=0 
+var T; 
+var Count=3;
+var typeCount=10
+
+var lineOne=new Array();
+var lineTwo=new Array();
+
+lineOne=["|","/","--","\\"];lineTwo=["|","\\","--","/"];
+
+var ArrayOfArrays=[lineOne,lineTwo,lineOne,lineTwo];
+
+var lines=new Array("one","two","three","four"); 
+var writing="";
+
+var RHUCKO1=0; 
+window.onload=loadVars;
+function loadVars()
+{
+ for(var x=0;x<lines.length;x++)
+  lines[x]=document.getElementById(lines[x]);
+	
+  writing=document.getElementById('typing');
+  writing.style.color=StartColor;
+	
+	setVals();
+}
+function setVals()
+{
+ if(Count<lineOne.length&&typeCount<mess[gcount].length)
+ {
+  T=15;
+  lines[0].innerHTML=ArrayOfArrays[0][Count];
+	lines[1].innerHTML=ArrayOfArrays[1][Count];
+	lines[2].innerHTML=ArrayOfArrays[2][Count];
+	lines[3].innerHTML=ArrayOfArrays[3][Count];
+	
+	Count+=1;
+ }
+ else
+ {
+   Count=0;
+ }
+ if(typeCount<=mess[gcount].length)
+ {
+   writing.style.position="relative";
+	 writing.innerHTML=mess[gcount].substring(typeCount-1,typeCount);
+	 
+	 typeCount++;
+ }
+ else if(RHUCKO1<=mess[gcount].length)
+ {
+   T=100;
+   writing.innerHTML=mess[gcount].substring(0,RHUCKO1);
+	 RHUCKO1++;
+ }
+ else if(gcount<mess.length-1)
+ {
+    if(gcount==mess.length-2)
+		{
+		 for(var x=0;x<lines.length;x++)
+		  lines[x].style.visibility="hidden";
+			
+		    writing.style.color=EndColor;	 
+		}
+		  
+   Count=0;typeCount=0;RHUCKO1=0;
+   gcount++;
+ }
+ setTimeout("setVals();",T);
+}
+
+function DynamicMove()
+{
+  location.href=HREF;
+}
+
+</script>
+<style type="text/css">
+<!--
+body span.line {
+		 					 	 position:relative;
+								 font-weight:900;
+								 font-size:80;
+								 color:gray;
+								 visibility:visible;
+		 					 }
+body tt#typing {
+		 					   font-weight:900;
+								 font-size:80px;
+								 cursor:hand;
+		 					 }
+-->
+</style>
+
+<meta charset="utf-8">
+<title>about.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<script type="text/javascript" src="java.js"></script>
+<body class="logo">
+<span class="line" id="one"></span><br />
+<span class="line" id="two"></span>
+<tt id="typing" onclick="DynamicMove();"></tt>
+<span class="line" id="three"></span><br />
+<span class="line" id="four"></span>
+
+<div>
+<p class="menu"><a href="homepage.html">Home</a></p>
+<p class="menu"><a href="about.html">About Us</a></p>
+<p class="menu"><a href="member.html">Members</a></p>
+<p class="menu"><a href="sponsor.html">Sponsor</a></p>
+<p class="menu"><a href="bulletins.html">Bulletins</a></p>
+<p class="menu"><a href="musos.html">Musos</a></p>
+<p class="menu"><a href="feedback.html">Feedback Form</a></p>
+<p>__________________________________ </p>
+<span style="text-align:left; font-weight:bold; font-size:20pt; color:black;">
+<marquee scrolldelay='10' width='200' bgColor='white' behavior='scoll' direction='left' style='color:black;' height='30'>Member Registration</marquee>
+             <br /></span><br>
+
+
+<div align="center" style="font-size:10pt">   
+         <img  src="TCMC Images Docs/randomImages/random6.jpg" alt="Random images of instruments" width="244" height="231"" align="left" border="3" />    
+         <img  src="TCMC Images Docs/randomImages/random5.jpg" alt="Random images of instruments" width="239" height="240"" align="right" border="3" />      
+          
+          <div class="JGNdiv2" style="text-align:center;width:65%;font-weight:normal;font-size:12pt; color:black;">
+            <span>To become a Member, or to update an existing Membership -<br /></span>
+              <center>
+              <table>
+              <tbody>
+              <tr class="NavBar">
+              <td><a href="TCMC Images Docs/docs/Membership applic form2014.pdf" target="_blank">Download the Application Form</a></td>
+              </tr>
+              </tbody>
+              </table>
+              </center>              
+            <span>Complete and return the form with cheque to -<br /><br />
+            Townsville Community Music Centre<br />
+            PO Box 1006, Townsville, Qld 4810<br /><br />
+            or email -</span>
+              <center>
+                  <table width="50%">
+                 <tbody>       
+                 <tr class="NavBar"><td><a href="mailto:admin@townsvillemusic.org.au?subject=About us page" target="_blank">admin@townsvillemusic.org.au </a></td></tr>
+                 </tbody></table>
+              </center>
+             <span>or see below to pay online with PayPal or credit card<br /></span>   <br>
+            <tr><td>Individual membership</td><td>$25</td><td>per year</td><td>    <br><br>
+             <td>Tax-deductible donation</td>       
+</div>            
+              <center>
+          <div style="text-align:left;width:570px">
+<p>
+ 
+<center>
+<img  src="TCMC Images Docs/paypal.png" alt="PayPal logo" width="249" height="94"  align="right" border="0" /></p></center>
+
+<tbody>
+     
+ <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="GCRJ28AFLXURQ" />
+                    <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_paynow_SM.gif" name="submit" alt="PayPal � The safer, easier way to pay online." />
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+                    
+                       <tr><td>--------------------------------</td><td><br>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="67K2M93WVJM2L" />
+                    <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal � The safer, easier way to pay online." /><br>
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1" />
+                    </form></td></tr>                       
+               </tbody></table>
+<br>___________________________________________________________________________________<br><br>
+<img src="TCMC Images Docs/events/TicketShop.jpg" width="576" height="118" alt=""/><br>
+
+<br>___________________________________________________________________________________<br><br>
+ <center><p>&copy; 2016-2017 Australia, <a href="http://www.jcu.edu.au/" target="_self">Townville Music Centre</a> | <a
+            href="#header" target="_self">To Top</a></p><br></center>
+<img src="TCMC Images Docs/SiteImages/TCCgcbfQN100px.png" width="500" height="100" alt=""/>
+</body>
+</html>

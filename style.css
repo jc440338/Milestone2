@@ -1,0 +1,48 @@
+@charset "utf-8";
+body{
+	
+background-image: url(image/marble.png);
+opacity: 1
+}
+
+.menu a:hover {background-color: darkgray;
+	display: block;
+	align-content: center;
+}
+
+.menu {	float:center;
+	width:100px;
+	height:40px;
+	background-color:white;
+	font-size:20px;
+	line-height:40px;
+	text-align:center;
+	opacity:0.8;
+	display:block;
+font-family: muli}
+
+.content {padding: 5px 3px;
+	border: solid 5px#ccc;
+	margin: 10px 5px;
+	
+}
+.menu{
+	font-style: normal;
+	font-weight: 400;
+		display: inline-block;
+	width: 150px;
+	height: 60px;
+	line-height: 60px;
+}
+.JGNdiv {
+	background-color: gainsboro;
+	border: thick 5px#000000;
+	border: 10px thick
+}.imgslide {
+	width: 800px;
+	height: 500px;
+}
+.AB2 {background-color: grey;
+	padding: 5px 3px;
+	
+}

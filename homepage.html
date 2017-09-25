@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+.menu {
+}
+.1 {
+}
+.content {
+}
+</style>
+<center><script language="JavaScript" type="text/javascript">
+<!--
+
+var mess=["Welcome","To","Townville Community","Music Centre","Townville Music Centre"]; 
+
+var StartColor="Grey";
+var EndColor="Black";
+
+
+
+var gcount=0 
+var T; 
+var Count=3;
+var typeCount=10
+
+var lineOne=new Array();
+var lineTwo=new Array();
+
+lineOne=["|","/","--","\\"];lineTwo=["|","\\","--","/"];
+
+var ArrayOfArrays=[lineOne,lineTwo,lineOne,lineTwo];
+
+var lines=new Array("one","two","three","four"); 
+var writing="";
+
+var RHUCKO1=0; 
+window.onload=loadVars;
+function loadVars()
+{
+ for(var x=0;x<lines.length;x++)
+  lines[x]=document.getElementById(lines[x]);
+	
+  writing=document.getElementById('typing');
+  writing.style.color=StartColor;
+	
+	setVals();
+}
+function setVals()
+{
+ if(Count<lineOne.length&&typeCount<mess[gcount].length)
+ {
+  T=15;
+  lines[0].innerHTML=ArrayOfArrays[0][Count];
+	lines[1].innerHTML=ArrayOfArrays[1][Count];
+	lines[2].innerHTML=ArrayOfArrays[2][Count];
+	lines[3].innerHTML=ArrayOfArrays[3][Count];
+	
+	Count+=1;
+ }
+ else
+ {
+   Count=0;
+ }
+ if(typeCount<=mess[gcount].length)
+ {
+   writing.style.position="relative";
+	 writing.innerHTML=mess[gcount].substring(typeCount-1,typeCount);
+	 
+	 typeCount++;
+ }
+ else if(RHUCKO1<=mess[gcount].length)
+ {
+   T=100;
+   writing.innerHTML=mess[gcount].substring(0,RHUCKO1);
+	 RHUCKO1++;
+ }
+ else if(gcount<mess.length-1)
+ {
+    if(gcount==mess.length-2)
+		{
+		 for(var x=0;x<lines.length;x++)
+		  lines[x].style.visibility="hidden";
+			
+		    writing.style.color=EndColor;	 
+		}
+		  
+   Count=0;typeCount=0;RHUCKO1=0;
+   gcount++;
+ }
+ setTimeout("setVals();",T);
+}
+
+function DynamicMove()
+{
+  location.href=HREF;
+}
+
+</script>
+<style type="text/css">
+<!--
+body span.line {
+		 					 	 position:relative;
+								 font-weight:900;
+								 font-size:80;
+								 color:gray;
+								 visibility:visible;
+		 					 }
+body tt#typing {
+		 					   font-weight:900;
+								 font-size:80px;
+								 cursor:hand;
+		 					 }
+-->
+</style>
+
+<meta charset="utf-8">
+<title>homepage.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<script type="text/javascript" src="java.js"></script>
+<body class="logo">
+<span class="line" id="one"></span><br />
+<span class="line" id="two"></span>
+<tt id="typing" onclick="DynamicMove();"></tt>
+<span class="line" id="three"></span><br />
+<span class="line" id="four"></span>
+<div>
+<p class="menu"><a href="homepage.html">Home</a></p>
+<p class="menu"><a href="about.html">About Us</a></p>
+<p class="menu"><a href="member.html">Members</a></p>
+<p class="menu"><a href="sponsor.html">Sponsor</a></p>
+<p class="menu"><a href="bulletins.html">Bulletins</a></p>
+<p class="menu"><a href="musos.html">Musos</a></p>
+<p class="menu"><a href="feedback.html">Feedback Form</a></p>
+<p>__________________________________ </p>
+<p>&nbsp;</p>
+<DIV class="content">
+  <p><img src="TCMC Images Docs/SiteImages/TCC83100.png" width="95" height="106" alt=""/><br>
+<span style="text-align:left; font-weight:bold; font-size:20pt; color:black;">
+<marquee scrolldelay='10' width='200' bgColor='white' behavior='scoll' direction='left' style='color:black;' height='30'>Visit Us!</marquee>
+             <br /></span><br>
+    9.30 -2.30 Monday - Wednesday<BR>
+  </p>
+  <p> <marquee scrolldelay='10' width='100' bgColor='white' behavior='scoll' direction='left' style='color:black;' height='20'>Contact Details</marquee><br>
+    Phone:   07 4724 2086 <BR>
+    Mobile:    0402 255 182 <BR>
+    <BR>
+    Postal Address  PO Box 1006, Townsville, Qld 4810<BR>
+  Address  Townsville Civic Theatre, 41 Boundary Street, Townsville, Qld 4810 </p>
+  <p> <strong>Are you <em>new</em> to Townsville?</strong><BR>
+    General information about Townsville is available at -<BR>
+  <A href="http://www.townsville.qld.gov.au/townsville/infocentre/Pages/default.aspx" target="_blank" data-lynx-mode="origin" data-ft="{'tn':'-U'}" data-lynx-uri="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.townsville.qld.gov.au%2Ftownsville%2Finfocentre%2FPages%2Fdefault.aspx&h=ATMbb6mP-O1xm2gYPnPnO09M-2dwgjcyFn6YTGHZv-3UTkpXtSkqmqqnmCftBtO6YBMj4TbUrncvXiUGNCgUFhySsQ2ZvORloodq-ND2wuKqLXozedCs2iO22Tk0v8FcygWKlNm1LvtkP3-cmRP24EDCrRUTBEVEAZGqWCA5dhChLdzRQZHhBjjI-yoy3hzhc0TiBpEMqGwJL0H0cUnZqMVBx6Ks6XQKEwd1TktFqDLh9cI1mUnQD6nqKn7apepjQxyWIj3tfGMJSs-JgwUwnoLrumxE5nTllTR3k0Z656nmIok">http://www.townsville.qld.gov.au/…/infoc…/Pages/default.aspx</A></p>
+  <p><img src="TCMC Images Docs/randomImages/random1.jpg" width="200" height="209" alt=""/><img src="TCMC Images Docs/randomImages/random2.jpg" width="171" height="213" alt=""/></p>
+  <span style="text-align:left; font-weight:bold; font-size:15pt; color:black;">
+<marquee scrolldelay='10' width='200' bgColor='white' behavior='scoll' direction='left' style='color:black;' height='30'>Background Information</marquee>
+             <br /></span> <br>
+  <p> Townsville has a population of about 200,000 and is growing at about 1 suburb per year, so there is a lot of musical activity.</p>
+  <p> All private schools and most government schools have music teachers. The larger private schools are Townsville Grammar, the Cathedral School and Ryan Catholic College. The larger public high schools are Kirwan and Pimlico.</p>
+  <p>More information:</p>
+  <p> <strong>Music Teachers Association of Qld</strong><br>
+    The Townsville Branch contact is the Secretary (Ms Margery Jorgensen)<br>
+    Phone (07) 47790382<br>
+    Email: mjo11750@bigpond.net.au</p>
+    
+  <p><BR>
+    <strong>Kodaly Music Education Institute of Australia</strong><BR>
+    <A href="http://www.kodaly.org.au/" target="_blank" data-lynx-mode="origin" data-ft="{'tn':'-U'}" data-lynx-uri="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.kodaly.org.au%2F&h=ATN4rRjWFdLgwo4-f8MM8xy0Tg_G6CLRi1xKAtWOmYTu_QXjkPPdm9qK6a3nZ82lrCSQbVKH_v2Zfg3hC3LnLeZxwq5RQy44dHVc4qrTLGNRtumMddvB9rDEMb5_sWyyUXs9Yv5EEj268WKd3m-en5BUItJAzmo9oU13zoPfU0RLnAQdhUxsQGel7fDNISBSAT8yC9ahWcSUNTUOYoda5FhVD6zB1Of8JBAq-vZRbWRyZNhuw0b4NoidUxOmUTHzAGAQJv_SA0oQIKIyY3dDBVvVxV3yKn25nA1mZuq3PUSallQ">www.kodaly.org.au/</A><BR>
+    Information on their Townsville Chapter can be found at -<BR>
+    <A href="http://webapps.townsville.qld.gov.au/CommunityDirectory/Organisation/OrganisationDetails/1185" target="_blank" data-lynx-mode="origin" data-ft="{'tn':'-U'}" data-lynx-uri="https://l.facebook.com/l.php?u=http%3A%2F%2Fwebapps.townsville.qld.gov.au%2FCommunityDirectory%2FOrganisation%2FOrganisationDetails%2F1185&h=ATNHO8H2FvGXjZAVABKOgIQrVD9wbjLVTzjlBqnjDP_0YvXPCx9Z2s6_BSmGKr8qbIYYT9kxug-_udBN0on_KZesFTHd_XLsqbiipzZy_cSFq9lBO5tuSaSCNyJhLC-DiEUsa6YkoXzup_hy0XZ-qvyxhN494ZLIjvE6OVUMqWF_c7oTp3opPOfZL00BZ-EUvfZuC2JQasImJRQ3HY0FfgZ-Rk_4GHsUEqeqJt7s48503lRmlmp2os80hKW121-4HQARi7MeZoHzwGhBu1FoU_AXnAa9mG7jk-3ur2SszUgz5Zo">http://webapps.townsville.qld.gov.au/…/OrganisationDet…/1185</A></p>
+  <p> <strong>Local businesses</strong> that employ or assist music teachers. - <BR>
+    heather@thekeyboardshop.com.au <BR>
+    and <A href="http://www.artiesmusiconline.com.au/" target="_blank" data-lynx-mode="origin" data-ft="{'tn':'-U'}" data-lynx-uri="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.artiesmusiconline.com.au%2F&h=ATObMXYmFpziUnk8lOImoXgKMlwjz4I4XW_6oIXHFwtGHJhMLvqzfPlLeMwW61jChSKzxteToLqG3N9cLKUTmjPkaAIuZ_dqoYveojmLtLtHKI6lysRTVZ_v-PIEozsqBWyIsSMzBPDOyZCzWRPR18pj6bSTe1O98OCpVL5YzlNff6iyo8QIc-fCODITQlJKK_S4TLJ1qBzzOJnHWEgr55mfA3_FUohDDyCYXRIFI_pvIOw1Flzrc2HysoWs6e_8d_0Jq1X7KUBbc2Tspf68LQT_P-tcjIjiXrqKAOruj2AHW_A">www.artiesmusiconline.com.au/</A></p>
+  <p> Busking is permitted at several public spaces around the city with a Buskers Permit from the city council - phone 4727 9680.<BR>
+    There is no age limit, but buskers 16 and under will need to be accompanied by a parent/guardian.</p>
+         <tr class="NavBar">
+              <td> <center><p>&copy; 2016-2017 Australia, <a href="http://www.jcu.edu.au/" target="_self">Townville Music Centre</a> | <a
+            href="#header" target="_self">To Top</a></p><br></center></td>
+              </tr>
+    
+</DIV>
+<p>Search Engine</p>
+<div id="searchContainer">
+  <form id="searchForm">
+    <input id="searchbox" name="q" type="text"/>
+      <button id="searchbutton" type="submit" value="search"/>
+  </form>
+     <p><img src="TCMC Images Docs/SiteImages/TCMCbanner01.png" width="1375" height="138" alt=""/></p>
+</div>
+
+
+
+
+</body>
+</html>

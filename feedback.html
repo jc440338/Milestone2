@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>feedback.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<center><script language="JavaScript" type="text/javascript">
+<!--
+
+var mess=["Welcome","To","Townville Community","Music Centre","Townville Music Centre"]; 
+
+var StartColor="Grey";
+var EndColor="Black";
+
+
+
+var gcount=0 
+var T; 
+var Count=3;
+var typeCount=10
+
+var lineOne=new Array();
+var lineTwo=new Array();
+
+lineOne=["|","/","--","\\"];lineTwo=["|","\\","--","/"];
+
+var ArrayOfArrays=[lineOne,lineTwo,lineOne,lineTwo];
+
+var lines=new Array("one","two","three","four"); 
+var writing="";
+
+var RHUCKO1=0; 
+window.onload=loadVars;
+function loadVars()
+{
+ for(var x=0;x<lines.length;x++)
+  lines[x]=document.getElementById(lines[x]);
+	
+  writing=document.getElementById('typing');
+  writing.style.color=StartColor;
+	
+	setVals();
+}
+function setVals()
+{
+ if(Count<lineOne.length&&typeCount<mess[gcount].length)
+ {
+  T=15;
+  lines[0].innerHTML=ArrayOfArrays[0][Count];
+	lines[1].innerHTML=ArrayOfArrays[1][Count];
+	lines[2].innerHTML=ArrayOfArrays[2][Count];
+	lines[3].innerHTML=ArrayOfArrays[3][Count];
+	
+	Count+=1;
+ }
+ else
+ {
+   Count=0;
+ }
+ if(typeCount<=mess[gcount].length)
+ {
+   writing.style.position="relative";
+	 writing.innerHTML=mess[gcount].substring(typeCount-1,typeCount);
+	 
+	 typeCount++;
+ }
+ else if(RHUCKO1<=mess[gcount].length)
+ {
+   T=100;
+   writing.innerHTML=mess[gcount].substring(0,RHUCKO1);
+	 RHUCKO1++;
+ }
+ else if(gcount<mess.length-1)
+ {
+    if(gcount==mess.length-2)
+		{
+		 for(var x=0;x<lines.length;x++)
+		  lines[x].style.visibility="hidden";
+			
+		    writing.style.color=EndColor;	 
+		}
+		  
+   Count=0;typeCount=0;RHUCKO1=0;
+   gcount++;
+ }
+ setTimeout("setVals();",T);
+}
+
+function DynamicMove()
+{
+  location.href=HREF;
+}
+
+</script>
+<style type="text/css">
+<!--
+body span.line {
+		 					 	 position:relative;
+								 font-weight:900;
+								 font-size:80;
+								 color:gray;
+								 visibility:visible;
+		 					 }
+body tt#typing {
+		 					   font-weight:900;
+								 font-size:80px;
+								 cursor:hand;
+		 					 }
+-->
+</style>
+
+<meta charset="utf-8">
+<title>about.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<script type="text/javascript" src="java.js"></script>
+<body class="logo">
+<span class="line" id="one"></span><br />
+<span class="line" id="two"></span>
+<tt id="typing" onclick="DynamicMove();"></tt>
+<span class="line" id="three"></span><br />
+<span class="line" id="four"></span>
+<script type="text/javascript" src="feed.js"></script>
+
+<div>
+<p class="menu"><a href="homepage.html">Home</a></p>
+<p class="menu"><a href="about.html">About Us</a></p>
+<p class="menu"><a href="member.html">Members</a></p>
+<p class="menu"><a href="sponsor.html">Sponsor</a></p>
+<p class="menu"><a href="bulletins.html">Bulletins</a></p>
+<p class="menu"><a href="musos.html">Musos</a></p>
+<p class="menu"><a href="feedback.html">Feedback Form</a></p>
+<p>__________________________________ </p>
+
+<div id ="content"><center>
+<table width="500" border="1">
+  <tbody>
+    <tr>
+      <th scope="col">
+<h1>
+    <span style="font-weight: 400"><span style="color: #3B3B3B"><strong>Feedback Form</strong></span>
+ </span> </h1></th>
+    </tr>
+    
+  </tbody>
+</table>
+
+
+<table width="500" border="1">
+  <tbody>
+    
+      <th scope="col"><form action="" method="post" name="mainForm" id="mainForm" onsubmit="return checkForm();">
+        <br>
+            <label for="name">Your Name: <img src="cross.png" alt="X" name="nameTick" width="12" height="12"
+                                              id="nameTick"/></label>
+            <input type="text" name="name" id="name" size="40" autofocus onKeyUp="nameEntered(this);"/>
+       
+      <br>
+        <label for="email">Your Email Address:</label>
+        <input type="text" name="email" id="email" size="40" style="color:#000000" onFocus="changeStyle(this)"
+               onBlur="changeColor(this, '#990099')"/>
+ 
+        <br>
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" id="phone" size="40" style="color:#000000"
+               onKeyUp="setColourBasedOnLength('phone', 8)"/>
+        <br>
+        <label for="HowOftenVisit">How often do you visit the site?</label>
+        <select name="HowOftenVisit" id="HowOftenVisit">
+            <option value="Never">Never</option>
+            <option value="Few">Sometime</option>
+            <option value="Monthly">Once a month</option>
+            <option value="Weekly">Once a week</option>
+            <option value="MoreWeekly">Often</option>
+            <option value="MoreDaily">Usually</option>
+        </select>
+        <br>
+        <label for="areas">What do you like about the our store?<br>
+            (<a href="#" onclick="clearArea(); return false">click here to select all/none</a>)</label>
+
+        <fieldset id="areas">
+            <legend id="areaLegend">Area:</legend>
+            <input name="areaVisited" type="checkbox" id="areaSchedule" value="schedule" onChange="checkArea()"/>
+            <label for="areaSchedule">Website</label>
+            <br>
+            <input name="areaVisited" type="checkbox" id="areaAssignments" value="assignments" onChange="checkArea()"/>
+            <label for="areaAssignments">Decoration</label>
+            <br>
+            <input name="areaVisited" type="checkbox" id="areaLinks" value="links" onChange="checkArea()"/>
+            <label for="areaLinks">Service</label>
+            <br>
+            <input name="areaVisited" type="checkbox" id="AreaMarks" value="marks" onChange="checkArea()"/>
+            <label for="AreaMarks">Staff friendlyness</label>
+        </fieldset>
+        <br>
+        <label>How do you rate the web site? <img src="cross.png" alt="X" name="rateTick" width="12" height="12" id="rateTick"><br>
+            (<a href="#" onClick="clearRating(); return false">click here to clear selection</a>) </label>
+        <fieldset>
+            <input type="radio" name="siterating" id="sitepoor" value="Poor"
+                   onclick="checkSiteRating(); alert('Please make sure you write comments below about why the site is poor.'); document.mainForm.comments.focus()"/>
+            <label for="sitepoor">Poor - not useful</label>
+            <br>
+            <input type="radio" name="siterating" id="sitegood" value="Good" onclick="checkSiteRating()"/>
+            <label for="sitegood">Good - useful, but could be better</label>
+            <br>
+            <input type="radio" name="siterating" id="siteverygood" value="VeryGood" onclick="checkSiteRating()"/>
+            <label for="siteverygood">Very Good - a very useful site</label>
+            <br>
+            <input type="radio" name="siterating" id="siteexcellent" value="Excellent" onclick="checkSiteRating()"/>
+            <label for="siteverygood">Excellent</label>
+        </fieldset>
+        <br>
+        <label for="comments">Please enter your comments about the website and possible improvements:<br>
+            <span id="characters">(10 characters remaining)</span>
+        </label>
+        <textarea name="comments" cols="50" rows="4" id="comments" onKeyUp="updateCharacters(10)"></textarea>
+        <br>
+
+        <div id="submission">
+            <!--<input type="reset" value="Reset" name="Reset" id="Reset" onclick="return confirm('Reset all fields?')"/>-->
+            <input type="reset" value="Reset" name="Reset" id="Reset" onclick="return resetForm()"/>
+            or
+            <input type="submit" value="Submit"/>
+        </div><br>
+        <marquee scrolldelay='10' width='200' bgColor='white' behavior='scoll' direction='left' style='color:black;' height='30'>Thank you :)</marquee>
+        <div><span id="message"></span></div>
+    </form>
+	</th>
+   
+  </tbody>
+</table>
+	</center>
+	</div>
+
+
+	
+	<div id="footer">
+    <p>&copy; 2016-2017 Australia, <a href="http://www.jcu.edu.au/" target="_self">Townville Music Centre</a> | <a
+            href="#header" target="_self">To Top</a></p>
+    <p>&nbsp;</p>
+
+	
+	
+</div>
+	<img src="TCMC Images Docs/SiteImages/TCCgcbfQN100px.png" width="500" height="100" alt=""/>
+
+</body>
+</html>

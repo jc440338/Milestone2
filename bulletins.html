@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+
+<center><script language="JavaScript" type="text/javascript">
+<!--
+
+var mess=["Welcome","To","Townville Community","Music Centre","Townville Music Centre"]; 
+
+var StartColor="Grey";
+var EndColor="Black";
+
+
+
+var gcount=0 
+var T; 
+var Count=3;
+var typeCount=10
+
+var lineOne=new Array();
+var lineTwo=new Array();
+
+lineOne=["|","/","--","\\"];lineTwo=["|","\\","--","/"];
+
+var ArrayOfArrays=[lineOne,lineTwo,lineOne,lineTwo];
+
+var lines=new Array("one","two","three","four"); 
+var writing="";
+
+var RHUCKO1=0; 
+window.onload=loadVars;
+function loadVars()
+{
+ for(var x=0;x<lines.length;x++)
+  lines[x]=document.getElementById(lines[x]);
+	
+  writing=document.getElementById('typing');
+  writing.style.color=StartColor;
+	
+	setVals();
+}
+function setVals()
+{
+ if(Count<lineOne.length&&typeCount<mess[gcount].length)
+ {
+  T=15;
+  lines[0].innerHTML=ArrayOfArrays[0][Count];
+	lines[1].innerHTML=ArrayOfArrays[1][Count];
+	lines[2].innerHTML=ArrayOfArrays[2][Count];
+	lines[3].innerHTML=ArrayOfArrays[3][Count];
+	
+	Count+=1;
+ }
+ else
+ {
+   Count=0;
+ }
+ if(typeCount<=mess[gcount].length)
+ {
+   writing.style.position="relative";
+	 writing.innerHTML=mess[gcount].substring(typeCount-1,typeCount);
+	 
+	 typeCount++;
+ }
+ else if(RHUCKO1<=mess[gcount].length)
+ {
+   T=100;
+   writing.innerHTML=mess[gcount].substring(0,RHUCKO1);
+	 RHUCKO1++;
+ }
+ else if(gcount<mess.length-1)
+ {
+    if(gcount==mess.length-2)
+		{
+		 for(var x=0;x<lines.length;x++)
+		  lines[x].style.visibility="hidden";
+			
+		    writing.style.color=EndColor;	 
+		}
+		  
+   Count=0;typeCount=0;RHUCKO1=0;
+   gcount++;
+ }
+ setTimeout("setVals();",T);
+}
+
+function DynamicMove()
+{
+  location.href=HREF;
+}
+
+</script>
+<style type="text/css">
+<!--
+body span.line {
+		 					 	 position:relative;
+								 font-weight:900;
+								 font-size:80;
+								 color:gray;
+								 visibility:visible;
+		 					 }
+body tt#typing {
+		 					   font-weight:900;
+								 font-size:80px;
+								 cursor:hand;
+		 					 }
+-->
+</style>
+
+<meta charset="utf-8">
+<title>about.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<script type="text/javascript" src="java.js"></script>
+<body class="logo">
+<span class="line" id="one"></span><br />
+<span class="line" id="two"></span>
+<tt id="typing" onclick="DynamicMove();"></tt>
+<span class="line" id="three"></span><br />
+<span class="line" id="four"></span>
+
+<div>
+<p class="menu"><a href="homepage.html">Home</a></p>
+<p class="menu"><a href="about.html">About Us</a></p>
+<p class="menu"><a href="member.html">Members</a></p>
+<p class="menu"><a href="sponsor.html">Sponsor</a></p>
+<p class="menu"><a href="bulletins.html">Bulletins</a></p>
+<p class="menu"><a href="musos.html">Musos</a></p>
+<p class="menu"><a href="feedback.html">Feedback Form</a></p>
+<p>__________________________________ </p>
+
+<img  src="TCMC Images Docs/events/aviva01300300.jpg" alt="Random images of instruments" width="244" height="231"" align="left" border="3" />   
+
+<span style="text-align:left; font-weight:bold; font-size:20pt; color:black;">
+<marquee scrolldelay='10' width='200' bgColor='white' behavior='scoll' direction='left' style='color:black;' height='30'>Volunteers Required!</marquee>
+             <br /></span>
+             <span style="text-align:left; font-weight:normal; font-size:12pt; color:black;">
+             To promote live performances, we must keep production costs to a minimum. 
+             <br />The Townsville City Council assists us by allowing many tasks to be done by volunteers.
+             <br />Most volunteer activities do not require any special skills e.g. setting out or stacking chairs.
+             <br /><br />Ushers play a special role, taking tickets at the door and ensuring the comfort and safety of all patrons.
+             <br />A brief, free training session is compulsory for this role, to learn theatre policy, emergency evacuation procedures, etc.
+             <br />Ushers are then registered with Civic Theatre management and may work at many theatre performances throughout the year.<br>
+             <br />
+             </span> 
+               <tr class="NavBar">
+              <td><h2><a href="TCMC Images Docs/docs/Concert Information.pdf" target="_blank">Concert Information Click here</a></h2>
+                <p><img src="TCMC Images Docs/events/TShop300web.jpg" width="300" height="55" alt=""/></p></td>
+              </tr>
+             
+<div class="JGNdiv" align="center" cellpadding="10" valign="left" style="text-align:center;background-color:#grey;width : 60%">
+          <span Style="font-size : 14pt ;	font-weight : bold ">
+            <br> Please call 4724 2086 <br /><br>if you are interested in taking part in these rewarding activities.</b></span>
+             <br /><br>
+      </div><br>
+<img src="TCMC Images Docs/events/Swing300300.jpg" width="300" height="300" alt=""/><img src="TCMC Images Docs/events/Townsville jazzclub logo.jpg" width="329" height="302" alt=""/><img src="TCMC Images Docs/events/Website01.jpg" width="335" height="242" alt=""/><br>______________________________ <br><br>
+       <center>
+      <div class="JGNdiv" style="text-align:left;width:60%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;
+        font-size:10pt; color:black;">  <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+         Posted 24-Mar-15
+Chord Organ 
+Volunteer Singers / Musicians 
+
+        <br /><br /></span>
+       <span>Our Parish Priest, Fr Mick Peters, is trying to development and foster a community for our 6 PM Vigil Mass at St Josephs on the Strand. 
+I'm helping by organising an event format, where I invite our members to bring a plate for a buffet and I provide music, or friends who can sing or perform. 
+Now that we are achieving some success, we need more people who can sing or play music. 
+I'm open to any kind of singing or performing so long as it is not too controversial. My preference would be for an artist to sing a medley of old time favorites. 
+Mass starts at 6pm and finishes about 10 to 7. 
+
+       </span>
+
+             <hr class="HR" />       
+       
+        <center>
+              <table>
+              <tbody>
+              <tr class="NavBar2">
+              <td><a href="docs/Concert Information.pdf" target="_blank">Find out what you need to do!</a></td>
+              </tr>
+              </tbody>
+              </table>
+              </center>
+        <span style="text-align:center;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;
+         font-size:10pt; color:black;">
+        If you would like to take part, please call Merle Trembath 0418882633 anytime <br /></span>
+              <center>
+                  <table width="50%">
+                 <tbody>       
+                 <tr class="NavBar2"><td><a href="mailto:admin@townsvillemusic.org.au?subject=About us page" target="_blank">admin@townsvillemusic.org.au </a></td></tr>
+                 </tbody></table>
+              </center>
+       </div>
+</center><br>
+<center>
+  <div class="JGNdiv" style="text-align:left;width:60%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;font-size:10pt; color:black;background-color:#B7B7B7">
+        <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+         Posted 21-March-15
+TCB logo CALL OUT FOR MUSOS 
+
+        <br /><br /></span>
+       <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;font-size:10pt; color:black;">
+        <br /><br />Deadline for initial submissions 29 March 2015. 
+Artists will need to be insured for public liability. 
+If you are interested please email details, examples or links to your work and a quote including travel expenses for performing at the event to the Event Stage Manager Emile Griffiths -
+       </span>
+
+        <span style="text-align:center;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+         mutec.audio@gmail.com
+see our Facebook page<br /></span>
+           
+  </div>
+</center><br>
+    
+    <div class="JGNdiv" style="text-align:left;width:60%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;
+        font-size:10pt; color:black;">  <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+  Posted 17-Mar-15
+Chord Organ Rouvas Academy of Singing 
+
+        <br /><br /></span>
+      <span>I have been in the music industry in Sydney for over 30 years in the capacity of singing teacher, stage performer, singer and musician. My daughter Diana Rouvas was a finalist in the 2012 â€œThe Voiceâ€ television show and she is a testament to what can be achieved with correct vocal training. Allow me to show you her technique and give yourself the opportunity to excel as a vocalist. Skype lessons also available 
+
+       </span>
+
+
+      <span style="text-align:center;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;
+         font-size:10pt; color:black;">
+   Visit rouvasacademyofsinging.com.au
+or phone John 0404 044 823
+<br /></span>
+              <center>
+                  <table width="50%">
+                 <tbody>       
+                 <tr class="NavBar2"><td><a href="mailto:admin@townsvillemusic.org.au?subject=About us page" target="_blank">admin@townsvillemusic.org.au </a></td></tr>
+                 </tbody></table>
+              </center>
+</div><br>
+    
+          <div class="JGNdiv" style="text-align:left;width:60%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;font-size:10pt; color:black;background-color:#B7B7B7">
+        <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+      Posted 09-Mar-15
+Chord Organ Music teaching by Effortless Technique 
+
+        </span>
+       <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;font-size:10pt; color:black;">
+        <br /><br />Are you struggling to master sections of your pieces at tempo? Are you stressing that you wonâ€™t be prepared because you donâ€™t have enough time to practice? Would you like to learn efficient and effective practice skills and strategies to help you play those difficult sections with confidence and ease and to the best of your ability? 
+Visit us on Facebook
+
+       </span><br>
+
+        <span style="text-align:center;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+         Email Cassandra Fixter
+or phone 0423 626 501
+<br /></span>
+       </div><br>
+       
+         <div class="JGNdiv" style="text-align:left;width:60%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;
+        font-size:10pt; color:black;">  <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+Posted 17 March 15
+Would you like to see Metropolitan Opera productions screened in Townsville?
+
+        <br /><br /></span>
+       <span>Met Opera 2015
+The Metropolitan Operaâ€™s award-winning series of operas in HD continues featuring ten operas captured live in high definition direct from New York, and screening concurrently with the NY season. Follow this link for more information: 
+
+       </span>
+
+
+        <span style="text-align:center;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;
+         font-size:10pt; color:black;">
+http://www.sharmillfilms.com.au/?page_id=2195#cinemas 
+<br /></span>
+ 
+       </div><br>
+           <div class="JGNdiv" style="text-align:left;width:60%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;font-size:10pt; color:black;background-color:#B7B7B7; border:thick:color:#black">
+        <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+Posted 15-March-2015 Christmas
+
+        </span>
+       <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;font-size:10pt; color:black;">
+        <br /><br />Event Cinemas are considering bringing the Met Opera HD series to Townsville. If you would like to encourage them to go ahead, please email Alexis at support@eventcinemas.helpserve.com with a simple message such as, â€˜Please bring Met Opera to Townsvilleâ€™. You may of course add additional comments if you wish. 
+Event Cinemas are considering bringing the Met Opera HD series to Townsville. If you would like to encourage them to go ahead, please email Alexis at support@eventcinemas.helpserve.com with a simple message such as, â€˜Please bring Met Opera to Townsvilleâ€™. You may of course add additional comments if you wish. We invite you to forward this message to others who may be interested.
+Posted 16-March-15
+Office Administrator required!
+The Townsville Community Music Centre is getting busier all the time, and we need a part-time Office Administrator. 
+This is a long-term, part time, part-paid position (all conditions are negotiable). 
+Experience with not-for profit organisations would be an advantage. 
+We use MYOB and Microsoft Office, mostly Word and Excel. 
+For more information -
+
+       </span><br>
+
+        <span style="text-align:center;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+         -- Email us --<br>
+or Phone: Jeff 4724 2086<br>
+<br>
+Dear fellow musos <br>
+I sing and play keyboard (when I have one). <br>
+Blues/jazz songs mostly.<br>
+-- Please email Ada Knowles --
+
+<br /></span>
+       </div><br><br>
+           <center><p>&copy; 2016-2017 Australia, <a href="http://www.jcu.edu.au/" target="_self">Townville Music Centre</a> | <a
+            href="#header" target="_self">To Top</a></p><br></center>
+           <img src="TCMC Images Docs/SiteImages/TCCgcbfQN100px.png" width="500" height="100" alt=""/><br>
+       
+</body>
+</html>

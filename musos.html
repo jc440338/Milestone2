@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+<head>
+
+<center><script language="JavaScript" type="text/javascript">
+<!--
+
+var mess=["Welcome","To","Townville Community","Music Centre","Townville Music Centre"]; 
+
+var StartColor="Grey";
+var EndColor="Black";
+
+
+
+var gcount=0 
+var T; 
+var Count=3;
+var typeCount=10
+
+var lineOne=new Array();
+var lineTwo=new Array();
+
+lineOne=["|","/","--","\\"];lineTwo=["|","\\","--","/"];
+
+var ArrayOfArrays=[lineOne,lineTwo,lineOne,lineTwo];
+
+var lines=new Array("one","two","three","four"); 
+var writing="";
+
+var RHUCKO1=0; 
+window.onload=loadVars;
+function loadVars()
+{
+ for(var x=0;x<lines.length;x++)
+  lines[x]=document.getElementById(lines[x]);
+	
+  writing=document.getElementById('typing');
+  writing.style.color=StartColor;
+	
+	setVals();
+}
+function setVals()
+{
+ if(Count<lineOne.length&&typeCount<mess[gcount].length)
+ {
+  T=15;
+  lines[0].innerHTML=ArrayOfArrays[0][Count];
+	lines[1].innerHTML=ArrayOfArrays[1][Count];
+	lines[2].innerHTML=ArrayOfArrays[2][Count];
+	lines[3].innerHTML=ArrayOfArrays[3][Count];
+	
+	Count+=1;
+ }
+ else
+ {
+   Count=0;
+ }
+ if(typeCount<=mess[gcount].length)
+ {
+   writing.style.position="relative";
+	 writing.innerHTML=mess[gcount].substring(typeCount-1,typeCount);
+	 
+	 typeCount++;
+ }
+ else if(RHUCKO1<=mess[gcount].length)
+ {
+   T=100;
+   writing.innerHTML=mess[gcount].substring(0,RHUCKO1);
+	 RHUCKO1++;
+ }
+ else if(gcount<mess.length-1)
+ {
+    if(gcount==mess.length-2)
+		{
+		 for(var x=0;x<lines.length;x++)
+		  lines[x].style.visibility="hidden";
+			
+		    writing.style.color=EndColor;	 
+		}
+		  
+   Count=0;typeCount=0;RHUCKO1=0;
+   gcount++;
+ }
+ setTimeout("setVals();",T);
+}
+
+function DynamicMove()
+{
+  location.href=HREF;
+}
+
+</script>
+<style type="text/css">
+<!--
+body span.line {
+		 					 	 position:relative;
+								 font-weight:900;
+								 font-size:80;
+								 color:gray;
+								 visibility:visible;
+		 					 }
+body tt#typing {
+		 					   font-weight:900;
+								 font-size:80px;
+								 cursor:hand;
+		 					 }
+-->
+</style>
+
+<meta charset="utf-8">
+<title>about.html</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<script type="text/javascript" src="java.js"></script>
+<body class="logo">
+<span class="line" id="one"></span><br />
+<span class="line" id="two"></span>
+<tt id="typing" onclick="DynamicMove();"></tt>
+<span class="line" id="three"></span><br />
+<span class="line" id="four"></span>
+
+<div>
+<p class="menu"><a href="homepage.html">Home</a></p>
+<p class="menu"><a href="about.html">About Us</a></p>
+<p class="menu"><a href="member.html">Members</a></p>
+<p class="menu"><a href="sponsor.html">Sponsor</a></p>
+<p class="menu"><a href="bulletins.html">Bulletins</a></p>
+<p class="menu"><a href="musos.html">Musos</a></p>
+<p class="menu"><a href="feedback.html">Feedback Form</a></p>
+<p>__________________________________</p>
+<p> <img src="TCMC Images Docs/SiteImages/TCMC150100.jpg" width="150" height="100" alt=""/></p>
+
+<center>
+    <div>
+      <img  src="TCMC Images Docs/randomImages/flamenco.png" alt="Random images of instruments" width="123" height="130" align="left" border="0" />    
+      <img  src="TCMC Images Docs/randomImages/piano.png" alt="Random images of instruments" width="116" height="128" align="right" border="0" />      
+     
+      <div class="JGNdiv" style="text-align:left;width:60%; ">
+       <span style="text-align:left; font-family:'Verdana','Arial',sans-serif; font-weight:bold;
+        font-size:12pt; color:black;">Free listing for Music Centre members!<br /></span>
+       
+        <span style="text-align:left; font-family:'Verdana','Arial',sans-serif; font-weight:bold;
+        font-size:12pt; color:black;">
+        Publicise yourself, your band or organisation here!<br /></span>
+        <span style="text-align:left; font-family:'Verdana','Arial',sans-serif; font-weight:normal;
+         font-size:10pt; color:black;">
+         Send your information, photos, etc. to - <br /></span>
+                        <center>
+                        <div>
+                        <table>
+                        <tbody>
+                        <tr class="NavBar">
+                        <td><a href="mailto:admin@townsvillemusic.org.au?subject=Musos page" target="_blank"> email admin@townsvillemusic.org.au </a></td>
+                        </tbody>
+                        </table>
+                        </center> 
+         <span style="text-align:left;width:80%; font-family:'Verdana','Arial',sans-serif; font-weight:normal;
+         font-size:10pt; color:black;">  
+        or mail to -<br />Townsville Community Music Centre<br />PO Box 1006<br />Townsville Q. 4810</span>
+        <br /></span>
+       </div>
+    </div>       
+    </center>             
+      <hr class="HR">
+          <div>
+<center>
+      <img src="TCMC Images Docs/events/Stokes.jpg" alt="TCB logo" width="600" height="250" border="0" align="center" hspace="10" />  
+             <span style="text-align:left; font-weight:normal; font-size:10pt; color:black;"><br clear="left"/>      
+             <b>The Townsville Concert Band are currently looking for musician members. </b>
+             <br />This is a local community band who meet once a week for rehearsals, and who play gigs around town throughout the year.
+             The band plays a range of different styles of concert band music, ranging from classical to musical theatre and modern.
+             <br /><b>All levels and ages are welcome.</b>
+             </span>
+
+              <table style="text-align:left;width:40%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+              <tbody>
+              </tr><td> For more information  -</td></tr>
+              <tr class="NavBar">
+              <td><a href="mailto:hollie.clark1@jcu.edu.au" target="_blank"> -- email us -- </a></td>
+              </tr>
+              </tr><td>or phone Hollie: 04019 151 185</td></tr>
+              </tr><td>or phone Mark: 0408 088 675</td></tr>
+              </tr>
+              <tr class="NavBar">
+              <td><a href=" https://www.facebook.com/TownsvilleConcertBand" target="_blank"> Check out our Facebook page</a></td>
+              </tr>
+
+              </tbody>
+              </table> 
+              
+</center>
+      </div>  
+      <hr class="HR">
+          <div>
+<center>
+      <span style="text-align:left; font-weight:bold; font-size:12pt; color:black;">
+             Wassa<br /></span>
+    
+             <img src="TCMC Images Docs/musos/img4.jpg" width="676" height="434" alt=""/><span style="text-align:left; font-weight:normal; font-size:10pt; color:black;"><br clear="left"/>
+             Wassa is a six-piece percussion group performing traditional rhythms from West Africa on traditional instruments. 
+             The Townsville based group has been performing throughout North Queensland and as far as Papua New Guinea since 2001. <br /><br />
+             </span>            
+
+                            <table  width="25%">
+                            <tbody>
+                            <tr class="NavBar">
+                            <td><a href="http://www.therhythmconnection.com/wassa.html" target="_blank">Visit our website</a></td>
+                            </tr>
+                            </tbody>
+                            </table>
+</center>
+      </div>      <hr class="HR">
+          <div>
+<center>
+      <span style="text-align:left; font-weight:bold; font-size:12pt; color:black;">
+             Poms from Oz<br /></span>
+    
+             <img src="TCMC Images Docs/musos/Poms.jpg" alt="Poms from Oz" width="524" height="378" border="0" align="center" hspace="10" vspace="10" />
+             <span style="text-align:left; font-weight:normal; font-size:10pt; color:black;"><br clear="left"/>
+             Poms from Oz are Judy, Kathleen and Alan Pomeroy, a family of solo vocalists from North Queensland, Australia. All are dinky di Oz with Judy and Kathy being descendents of First Fleeters.
+             <br /><br />
+             Their tight harmony and vocal strength bring a fresh feel to original, contemporary and traditional works, uncovering a rich tapestry of songs gathered in their travels from around the world. Most songs are a cappella but sometimes accompanied by guitar and/or harmonica. Moods in their songs range from downright to real tear jerkers and audience participation is encouraged. Their sound is distinctive, as Judy arranges all the songs specifically for their voices.
+             <br /><br />
+             A tast brew of Oz songs and Oz voices, with a dash of guitar and harmonica. Open a nice bottle of red , sit back and enjoy. 
+      </span>
+             <span style="text-align:left; font-weight:bold; font-size:10pt; color:black;">
+             For further information or bookings contact the Music Centre 4724 2086<br /></span>
+
+                            <table  width="40%">
+                            <tbody>
+                            <tr class="NavBar">
+                            <td><a href="mailto:admin@townsvillemusic.org.au?subject=Music Centre Bulletin Board" target="_blank">or email admin@townsvillemusic.org.au</a></td>
+                            </tr>
+                            </tbody>
+                            </table>
+</center>
+          </div>      <hr class="HR">         
+            <div>
+<center>
+      <span style="text-align:left; font-weight:bold; font-size:12pt; color:black;">Rosewood Guitar Quartet<br /></span>
+    
+             <img src="TCMC Images Docs/musos/Harbourside.jpg" alt="Rosewood" width="551" height="442" border="0" align="center" hspace="10" vspace="10" />
+             
+             <span style="text-align:left; font-weight:normal; font-size:12pt; color:black;"><br clear="left"/>
+             Add some elegance to your next social event!<br />Have the Rosewood Guitar Quartet provide that special atmosphere by playing for your guests<br />
+      Sample CD available on request<br /></span>            
+             <span style="text-align:left; font-weight:bold; font-size:10pt; color:black;">
+             Phone: 0427 255 125<br /></span>
+
+                            <table  width="40%">
+                            <tbody>
+                            <tr class="NavBar">
+                            <td><a href="mailto:joannemmccluskey@gmail.com?subject=Music Centre Bulletin Board" target="_blank">or email Joanne</a></td>
+                            </tr>
+                            </tbody>
+                            </table>
+</center>            
+      </div>      <hr class="HR">
+          <div>
+<center>
+      <span style="text-align:left; font-weight:bold; font-size:12pt; color:black;">
+             The Camerata Singers<br /></span>
+    
+      <img border="0" src="TCMC Images Docs/musos/img2.jpg" width="600" align="center" hspace="10" vspace="10" alt="Poms from Oz" />
+             <span style="text-align:left; font-weight:normal; font-size:10pt; color:black;"><br clear="left"/>
+             The concept of the Camerata Singers originated in the 1980s when Susan Grinsell, who was teaching voice at James Cook University realised that ensemble singing was sadly lacking for tertiary music students. Since then, Susan, along with repetiteur Carol Dall�Osto, has strived to bring quality ensemble singing to the wider community by performing at events from the Ingham Italian Festival through to Cotter�s Markets in the mall.
+             <br /><br />
+             The Camerata Singers comprises a group of trained singers, both male and female, from age 18 and over who strive to provide quality performances in a range of styles from classical through to A cappella and contemporary.  A number of members also regularly participate in local music theatre and theatre productions.
+             </span>
+             <span style="text-align:left; font-weight:bold; font-size:10pt; color:black;">
+             For further information or bookings contact the Music Centre 4724 2086<br /></span>
+
+                            <table  width="40%">
+                            <tbody>
+                            <tr class="NavBar">
+                            <td><a href="mailto:admin@townsvillemusic.org.au?subject=Website enquiry" target="_blank">or email admin@townsvillemusic.org.au</a></td>
+                            </tr>
+                            </tbody>
+                            </table>
+</center>
+          </div>      <hr class="HR">
+   <div style="background-color:#676767" >
+<center>
+    <img  src="TCMC Images Docs/musos/DD600400.png" width="400" align="left" border="0" alt="Dirty Dozen" />
+    <a href="https://www.facebook.com/thedirtydozenband" target="_blank"><img  src="TCMC Images Docs/facebook_like_logo_1-701x530.jpg" alt="Facebook link" width="102" height="66" hspace="10" align="right" border="0" /></a>     
+    <span style="text-align:left; font-weight:bold; font-size:12pt; color:#000;">
+     <br />
+     Townsville's dynamic 12-piece Stage Band!            
+         <br clear="right"/><br />Jazz, rock, blues and modern top-40 songs featuring vocalists, trumpets, saxophones, trombone, drums, piano/keyboard and guitars.
+    </span>
+    <span style="text-align:left; font-weight:bold; font-size:10pt; color:#000;">
+     <br /><br />Some titles from the repertoire &nbsp - &nbsp 
+      It Don't Mean a Thing
+     &nbsp - &nbsp Mustang Sally
+     &nbsp - &nbsp Spinning Wheel
+     &nbsp - &nbsp Moondance
+     &nbsp - &nbsp In the Midnight Hour
+     &nbsp - &nbsp Le Belleclaire Blues
+     &nbsp - &nbsp Lady Madonna
+     &nbsp - &nbsp Skyfall
+     &nbsp - &nbsp Shake a Tail Feather
+     &nbsp - &nbsp Soul Man
+     &nbsp - &nbsp Peter Gunn
+     &nbsp - &nbsp Minnie the Moocha
+     &nbsp - &nbsp Sweet Home Chicago
+     &nbsp - &nbsp R.E.S.P.E.C.T.
+     &nbsp - &nbsp Everybody
+     &nbsp - &nbsp Leave Your Hat On
+     &nbsp - &nbsp Superstition
+     &nbsp - &nbsp The Letter
+     &nbsp - &nbsp Proud Mary
+     &nbsp - &nbsp Knock on Wood
+     &nbsp - &nbsp I Got You
+     &nbsp - &nbsp ROCK in the USA
+     &nbsp - &nbsp December 1963 (Oh What a Night!)
+     &nbsp - &nbsp Don't Know Why
+     &nbsp - &nbsp Walkin' on Sunshine
+    </span>
+    <span style="text-align:left; font-weight:bold; font-size:10pt; color:#000;">
+     <br /><br />Contact Andi Hodgson 0421 072 625
+    </span>    
+    <br clear="left"/>
+   </div>
+</center>
+</div>      <hr class="HR">
+             <div>
+ <center>
+    <span style="text-align:left; font-weight:bold; font-size:12pt; color:black;">
+             Celtic Fyre<br /></span>
+    
+    <img border="0" src="TCMC Images Docs/musos/img3.jpg" align="center" hspace="10" vspace="10" alt="Celtic Fyre" />
+             <span style="text-align:left; font-weight:normal; font-size:10pt; color:black;"><br clear="left"/>
+             <b>The alternative celtic rock band from North Queensland</b><br /><br />
+             Typical audience response: - "WOW - I wasn't 
+             prepared for that! Racing around the stage in kilts, blowing bagpipes, jumping 
+             from one instrument to the next, these guys know how to entertain!" <br /><br />
+             They will break your heart with the mournful and eerie sounds of the Great 
+             Highland Bagpipe and then crank it up real hard and rock you 'til you drop. <br /><br />
+             This 11 piece band  is a fun-loving kick-em-in-the-pants band that just wants to rock - celtic style! 
+             <br /><br />
+             </span>            
+
+                            <table  width="25%">
+                            <tbody>
+                            <tr class="NavBar">
+                            <td><a href="http://www.celticfyre.com/" target="_blank"> www.celticfyre.com </a></td>
+                            </tr>
+                            </tbody>
+                            </table>
+</center>
+             </div>      <hr class="HR">
+          <div>
+<center>
+    <img border="0" src="TCMC Images Docs/musos/Aquapella01.jpg" width="600px" align="center" hspace="10" alt="TCB logo" />  
+             <span style="text-align:left; font-weight:normal; font-size:10pt; color:black;"><br clear="left"/>      
+             <b>The Townsville Concert Band are currently looking for musician members. </b>
+             <br />This is a local community band who meet once a week for rehearsals, and who play gigs around town throughout the year.
+             The band plays a range of different styles of concert band music, ranging from classical to musical theatre and modern.
+             <br /><b>All levels and ages are welcome.</b>
+             </span>
+
+              <table style="text-align:left;width:40%; font-family:'Verdana','Arial',sans-serif; font-weight:bold;font-size:12pt; color:black;">
+              <tbody>
+              </tr><td> For more information  -</td></tr>
+              <tr class="NavBar">
+              <td><a href="mailto:hollie.clark1@jcu.edu.au" target="_blank"> -- email us -- </a></td>
+              </tr>
+              </tr><td>or phone Hollie: 04019 151 185</td></tr>
+              </tr><td>or phone Mark: 0408 088 675</td></tr>
+              </tr>
+              <tr class="NavBar">
+              <td><a href=" https://www.facebook.com/TownsvilleConcertBand" target="_blank"> see our Facebook page</a></td>
+              </tr>
+
+              </tbody>
+              </table> 
+              
+</center>
+</div>                          <hr class="HR">
+<div style="background-color:#8D8D8D;padding: 10px;" > 
+         <span style="text-align: center; font-weight:bold; font-size:12pt; color:black;">Aviva Quartet<br /></span>
+            <img  align="center" src="TCMC Images Docs/musos/AVIVA-LANE500.jpg" border="0" hspace="10" vspace="10" width="600"alt="Aviva" />
+           <br clear="left"/>
+            <div style="text-align: left">             
+             <span style="font-weight:bold; font-size:12pt; color:black;">
+             <br />Four talented musicians combine their skills in a variety of musical styles including fiery Rhumbas, Tangos, Serenades - a mixture of the most devine and swoon-worthy pieces, guaranteed to delight the senses.</span>
+             </span>
+             <span style="font-weight:bold; font- size:10pt; color:black;">
+             <br /><br />Caroline Lloyd-Doolan is a well known performer both locally and regionally and Susan Fraser is also well known on the local music scene.  
+             <br />New members for 2015 are cellist Carol Radovanovic and Rebecca Brown on Viola. 
+             <br />
+             <br />The girls all have a passion for chamber music and are very excited to be able to form up a group that will be able to perform regularly both locally and in the surrounding regions. 
+              <br />Their concert will take listeners through a wonderful journey of beautiful melodies and the most romantic music that is guaranteed to leave the senses fulfilled and wanting more. 
+              <br />
+              <br /></span>                  
+             <span style="font-weight:bold; font-size:12pt; color:black;">
+               Phone&nbsp;&nbsp; 07 4724 2086<br />Mobile&nbsp;&nbsp;&nbsp; 0402 255 182<br />
+             </span>           
+                <table width="50%">
+                <tbody>       
+                 <tr class="NavBar2"><td><a href="mailto:admin@townsvillemusic.org.au?subject=Enquiry from website"> 
+            e-mail admin@townsvillemusic.org.au</a></td></tr>
+                </tbody></table>
+           <br clear="left"/>
+         </div>
+       </div>
+
+      <hr class="HR">
+          <div>
+<center>
+    <span style="text-align:left; font-weight:bold; font-size:12pt; color:black;">STOKES-NICHOLSON BIG BAND<br /></span>
+    <img border="0" src="TCMC Images Docs/musos/uyu (2).jpg"  width="600" align="center" hspace="10" vspace="10" alt="Stokes Nicholson Big Band" />
+  
+             <span style="text-align:left; font-weight:normal; font-size:12pt; color:black;"><br clear="left"/>The Stokes-Nicholson Big Band is a not for profit community 22 piece Big Band playing Jazz and Big Band music. 
+              <br /></span>
+
+             <span style="text-align:left; font-weight:bold; font-size:10pt; color:black;">For more information contact Les Nicholson on 0417 637 893<br /><br /></span>
+                            <table  width="40%">
+                            <tbody>
+                            <tr class="NavBar">
+                            <td><a href="mailto:mlg7@optusnet.com.au?subject=Music Centre Bulletin Board" target="_blank">or email </a></td>
+                            </tr>
+                            </tbody>
+                            </table>
+</center>            
+</div>           
+</td>
+ 
+</tr>
+ <center><p>&copy; 2016-2017 Australia, <a href="http://www.jcu.edu.au/" target="_self">Townville Music Centre</a> | <a
+            href="#header" target="_self">To Top</a></p><br></center>
+<center><img src="TCMC Images Docs/SiteImages/TCCgcbfQN100px.png" width="500" height="100" alt=""/></center>
+</body>
+</html>
